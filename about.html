@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|PT+Sans+Narrow|Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rozha+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+<style>
+body {
+  padding: 0;
+  margin: 0;
+  background: #FFF;
+  /*linear-gradient(to bottom right, #173c49, #193d49);*/
+  font-size: 10px;
+}
+
+#nav {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 80%;
+  height: 130px;
+}
+
+#nav img {
+  display: inline;
+  float: left;
+  width: 8rem;
+  height: 8rem;
+  box-shadow: 5px 5px 5px 5px grey;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: inline;
+    width: 74%;
+    height: 30%;
+}
+
+li {
+    float: right;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+}
+
+li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+/*li a:hover {
+    background-color: #FFF;
+}*/
+
+#h1_box {
+  width: 90%;
+  padding-left: 10%;
+  padding-top: 5%;
+  height: 130px;
+  font-family: 'Lato', sans-serif;
+  color: #8f8f8f;
+  line-height: 100%;
+}
+
+h1 {
+  color:#00679e;
+  font-size: 5em;
+  line-height: 100%;
+  margin-bottom: 3px;
+}
+
+h2 {
+  font-size: 1em;
+  color: #000;
+  line-height: 100%;
+  margin-top: 0px;
+}
+
+h4 {
+	font-size: 5em;
+  color: #ababab;
+  line-height: 100%;
+  margin-top: 0px;
+}
+
+h3 {
+	font-size: 4em;
+	text-align: center;
+	color: #ababab;
+  font-family: 'Lato', sans-serif;
+}
+
+#toa_txt {
+  width: 70%;
+  height: 410px;
+  padding-left: 10%;
+  padding-right: 20%;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  color: #000;
+  overflow: scroll;
+  line-height: 140%;
+}
+
+
+#map_box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#map {
+  height: 500px;
+  width: 80%;     
+  border-radius:;
+  border-style: groove;
+  border-width: medium;
+  margin-bottom: 5rem;
+}
+
+#featured_box{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+
+}
+
+#featured {
+  width: 75%;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#featured img {
+  width: 295px;
+  height: 295px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ /*hover pix*/
+
+.overlaycontainer {	
+	position: relative;
+	width: 295px;
+	height: 295px;
+	border-radius: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  border-radius: 50%;
+}
+
+.overlaycontainer:hover .overlay {
+  opacity: 1;
+}
+
+.overlaytext {
+  color: #FFF;
+  text-shadow: 0.5px 0.5px grey;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  position: absolute;
+  font-weight: 700;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*hover pic*/
+
+#footer {
+  width: 100%;
+  height: 200px;
+  background-color: #000;
+}
+
+.rotate-90 {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 1rem;
+    line-height: 140%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div id="nav">
+  <a href="index.html"><img src="https://i.pinimg.com/736x/94/ce/09/94ce09c83b790241a1c5ffb3eff050e7--lettering-typography.jpg" height="30px" width="30px"></a>
+  <ul>
+    <li><a href="#contact">Log In</a></li>
+    <li><a href="#news"><a href="about.html">About Us</a></li>
+  </ul>
+</div>
+
+<div id="h1_box">
+  <h1>About Us</h1>
+</div>
+
+<div id="toa_txt">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p><img src="https://image.flaticon.com/icons/svg/114/114333.svg" width="30px" height="30px"> +46739142278</p>
+  <p><img src="https://image.flaticon.com/icons/svg/259/259624.svg" width="30px" height="30px"> findyourthrone@hyperisland.se</p>
+  <p><img src="https://image.flaticon.com/icons/svg/160/160167.svg" width="30px" height="30px"> @findyourthrone</p>
+</div>
+
+<!--map start-->
+
+<div id="map_box">
+<div id="map"></div>  
+        
+<script>
+    var map;
+    var service;
+    var infowindow;
+        function initMap(){
+            
+             infoWindow = new google.maps.InfoWindow;
+            //Map options
+           var options = {
+                zoom:12,
+               scrollwheel: false,
+               mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center:{lat:59.298149, lng:17.991850},
+              styles:[
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 40
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 25
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 29
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 40
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 18
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 19
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 15
+            }
+        ]
+    }
+]
+            
+                }
+    
+            
+        var map = new google.maps.Map(document.getElementById('map'), options);
+       /* 
+        // Listen for click on map
+        google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+            
+        });
+        */
+            
+        // Array of markers 
+       var markers = [
+         {
+            coords:{lat:59.298149, lng:17.991850}, /*iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png', */
+                content:'<h2>Hyper Island</h2>'
+          }, 
+      ];
+            
+    /* We want to loop through the array above and then for each itiration we will call addMArker instead of having to call it every single time */
+                
+        // Loop through markers
+        for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+        }
+    
+            
+            
+       // Add Marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          //icon:props.iconImage
+        });
+        // Check for customicon
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+            
+    }    
+        
+</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrMZbOhCSD8sf_lerTGcbncwud56p_GkQ&libraries=places&callback=initMap">
+    </script>
+</div>
+<!--map stop-->
+
+</body>
+</html>
